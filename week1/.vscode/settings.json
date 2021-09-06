@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/maxx/workspace/mooc_algorithms1/algs4.jar"
+    ]
+}
