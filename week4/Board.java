@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Board {
@@ -11,15 +10,17 @@ public class Board {
     // create a board from an n-by-n array of tiles,
     // where tiles[row][col] = tile at (row, col)
     public Board(int[][] tiles) {
-        this.tiles = Arrays.stream(tiles).map(int[]::clone).toArray(int[][]::new);
+        int[][] copy = new int[tiles.length][tiles.length];
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles.length; j++) {
+                copy[i][j] = tiles[i][j];
                 if (tiles[i][j] == 0) {
                     blankX = i;
                     blankY = j;
                 }
             }
         }
+        this.tiles = copy;
     }
 
     // string representation of this board
@@ -97,8 +98,6 @@ public class Board {
 
     // does this board equal y?
     public boolean equals(Object y) {
-        if (y == this)
-            return true;
         if (y == null)
             return false;
         if (y.getClass() != this.getClass())
@@ -138,31 +137,26 @@ public class Board {
         // neighbouring cells of the blank square (0)
         List<Board> neighborsList = new ArrayList<>();
         int n = dimension();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (tiles[i][j] == 0) {
-                    if (i > 0) { // north
-                        Board b = new Board(tiles);
-                        b.swap(i, j, i - 1, j);
-                        neighborsList.add(b);
-                    }
-                    if (i < n - 1) { // south
-                        Board b = new Board(tiles);
-                        b.swap(i, j, i + 1, j);
-                        neighborsList.add(b);
-                    }
-                    if (j > 0) { // west
-                        Board b = new Board(tiles);
-                        b.swap(i, j, i, j - 1);
-                        neighborsList.add(b);
-                    }
-                    if (j < n - 1) { // east
-                        Board b = new Board(tiles);
-                        b.swap(i, j, i, j + 1);
-                        neighborsList.add(b);
-                    }
-                }
-            }
+        int i = blankX, j = blankY;
+        if (i > 0) { // north
+            Board b = new Board(tiles);
+            b.swap(i, j, i - 1, j);
+            neighborsList.add(b);
+        }
+        if (i < n - 1) { // south
+            Board b = new Board(tiles);
+            b.swap(i, j, i + 1, j);
+            neighborsList.add(b);
+        }
+        if (j > 0) { // west
+            Board b = new Board(tiles);
+            b.swap(i, j, i, j - 1);
+            neighborsList.add(b);
+        }
+        if (j < n - 1) { // east
+            Board b = new Board(tiles);
+            b.swap(i, j, i, j + 1);
+            neighborsList.add(b);
         }
         return neighborsList;
     }
@@ -182,13 +176,13 @@ public class Board {
     public static void main(String[] args) {
         int[][] tiles = {
                 {
-                        8, 1, 3
+                        1, 2, 3
                 },
                 {
-                        4, 0, 2
+                        0, 7, 6
                 },
                 {
-                        7, 6, 5
+                        5, 4, 8
                 }
         };
         Board slider = new Board(tiles);

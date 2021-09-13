@@ -3,8 +3,6 @@ import edu.princeton.cs.algs4.MinPQ;
 import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.StdOut;
 
-import java.util.Comparator;
-
 public class Solver {
     private SearchNode solution;
 
@@ -13,27 +11,36 @@ public class Solver {
         if (initial == null)
             throw new IllegalArgumentException("Initial board cannot be null");
 
-        MinPQ<SearchNode> pq;
-        Comparator<SearchNode> comp = new Comparator<SearchNode>() {
-            public int compare(SearchNode o1, SearchNode o2) {
-                return o1.priority - o2.priority;
-            }
-        };
-        pq = new MinPQ<>(comp);
+        MinPQ<SearchNode> pq = new MinPQ<>();
+        MinPQ<SearchNode> twinPQ = new MinPQ<>();
+
         SearchNode initialNode = new SearchNode(0, initial, null);
         pq.insert(initialNode);
+
+        SearchNode initialTwinNode = new SearchNode(0, initial.twin(), null);
+        twinPQ.insert(initialTwinNode);
         while (true) {
             solution = pq.delMin();
-            int moves = solution.moves;
+            SearchNode twin = twinPQ.delMin();
             if (solution.board.isGoal())
                 break;
-            if (solution.board.hamming() == 2 && solution.board.twin().isGoal()) {
+            else if (twin.board.isGoal()) {
                 solution = null;
                 break;
             }
+
+            int moves = solution.moves;
+            Board prevBoard = moves > 0 ? solution.prev.board : null;
             for (Board nb : solution.board.neighbors()) {
-                SearchNode node = new SearchNode(moves + 1, nb, solution);
-                if (!node.board.equals(solution.board)) pq.insert(node);
+                if (nb.equals(prevBoard)) continue;
+                pq.insert(new SearchNode(moves + 1, nb, solution));
+            }
+
+            int movesTwin = solution.moves;
+            Board prevBoardTwin = movesTwin > 0 ? twin.prev.board : null;
+            for (Board nb : twin.board.neighbors()) {
+                if (nb.equals(prevBoardTwin)) continue;
+                twinPQ.insert(new SearchNode(movesTwin + 1, nb, twin));
             }
         }
     }
@@ -56,7 +63,6 @@ public class Solver {
             return null;
         SearchNode node = solution;
         Stack<Board> sol = new Stack<>();
-        sol.push(node.board);
         while (node != null) {
             sol.push(node.board);
             node = node.prev;
@@ -88,7 +94,7 @@ public class Solver {
         }
     }
 
-    private static class SearchNode {
+    private static class SearchNode implements Comparable<SearchNode> {
         private final int moves;
         private final Board board;
         private final SearchNode prev;
@@ -99,6 +105,10 @@ public class Solver {
             this.board = board;
             this.prev = prev;
             priority = board.manhattan() + moves;
+        }
+
+        public int compareTo(SearchNode that) {
+            return this.priority - that.priority;
         }
     }
 
