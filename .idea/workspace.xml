@@ -44,7 +44,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
-  <component name="RunManager" selected="Application.SAP">
+  <component name="RunManager" selected="Application.SeamCarver">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -97,6 +97,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SeamCarver" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="part_II.week2.SeamCarver" />
+      <module name="coursera-algorithm-princeton" />
+      <option name="PROGRAM_PARAMETERS" value="part_II/week2/test.png 300 0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WordNet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="part_II.week1.WordNet" />
       <module name="coursera-algorithm-princeton" />
@@ -120,6 +128,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.SAP" />
+      <item itemvalue="Application.SeamCarver" />
       <item itemvalue="Application.Outcast" />
       <item itemvalue="Application.KdTreeVisualizer" />
       <item itemvalue="Application.KdTree" />
