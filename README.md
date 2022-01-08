@@ -1,6 +1,6 @@
-# Coursera Algorithm Part I
-
 A collection of programming assignements + some lecture code. ;)
+
+# Coursera Algorithm Part I
 
 ## Week 1 - Percolation 
 
@@ -31,3 +31,31 @@ Score: 100/100
 [Kdtree specification](https://coursera.cs.princeton.edu/algs4/assignments/kdtree/specification.php)
 
 Score: 100/100
+
+
+# Coursera Algorithm Part II
+
+## Week 1 - WordNet
+
+Topics covered:
+ - Directed Graphs
+ - Breadth-first search
+ - Depth-first search
+ - Shortest ancestral path (SAP)
+
+[WordNet specification](https://coursera.cs.princeton.edu/algs4/assignments/wordnet/specification.php)
+
+Score: 83/100
+
+## Week 2 - SeamCarver
+
+Topics covered:
+ - Seam Carving algorithm
+ - Image resizing
+ - Vertex weitghted directed graphs
+ - Shortest path (single-source)
+ - Topological sort / reverse postorder
+
+ [Seam Carving specification](https://coursera.cs.princeton.edu/algs4/assignments/seam/specification.php)
+
+ Score: 99/100
