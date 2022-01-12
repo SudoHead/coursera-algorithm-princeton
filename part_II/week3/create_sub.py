@@ -2,6 +2,8 @@ import sys, os, argparse
 
 parser = argparse.ArgumentParser(description='Creates a submission ready zip file with the .java files in the current directory.')
 parser.add_argument('output', help='The name of the output zip file.')
+# add argparse argument to exclude files
+parser.add_argument('-e', '--exclude', nargs='+', help='The files to exclude from the zip file.')
 
 args = parser.parse_args()
 
@@ -20,6 +22,9 @@ if not os.path.exists(temp_dir):
 original_txt = {}
 sub_files = []
 for f in files:
+    if args.exclude is not None:
+        if f in args.exclude:
+            continue
     copied_file = os.path.join(temp_dir, os.path.basename(f))
     shutil.copyfile(f, copied_file)
     with open(copied_file, "r") as fp:

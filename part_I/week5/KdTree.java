@@ -1,3 +1,5 @@
+package part_I.week5;
+
 import edu.princeton.cs.algs4.Point2D;
 import edu.princeton.cs.algs4.RectHV;
 import edu.princeton.cs.algs4.StdDraw;
@@ -212,7 +214,7 @@ public class KdTree {
         kdtree.insert(new Point2D(0.8125, 1.0));
         kdtree.insert(new Point2D(0.6875, 0.5625));
         System.out.println("size after inserting 20 points: " + kdtree.size());
-        kdtree.draw();
+//        kdtree.draw();
         System.out.println("contains Point2D(0.625, 0.4375): " + kdtree.contains(new Point2D(0.625, 0.4375)));
         System.out.println("Point in RectHV(.1, .1, .95, .5): ");
         for (Point2D p : kdtree.range(new RectHV(0.1, 0.1, 0.95, 0.5))) {
