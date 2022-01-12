@@ -65,6 +65,7 @@ Topics covered:
 Topics covered:
 - MaxFlow and MinCut
 - Ford-Fulkerson algorithm
+- Flow network
 
 [BaseballElimination specification](https://coursera.cs.princeton.edu/algs4/assignments/baseball/specification.php)
 
