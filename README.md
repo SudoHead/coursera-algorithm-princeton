@@ -59,3 +59,13 @@ Topics covered:
  [Seam Carving specification](https://coursera.cs.princeton.edu/algs4/assignments/seam/specification.php)
 
  Score: 99/100
+
+## Week 3 - BaseballElimination
+
+Topics covered:
+- MaxFlow and MinCut
+- Ford-Fulkerson algorithm
+
+[BaseballElimination specification](https://coursera.cs.princeton.edu/algs4/assignments/baseball/specification.php)
+
+Score: 100/100
