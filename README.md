@@ -70,3 +70,13 @@ Topics covered:
 [BaseballElimination specification](https://coursera.cs.princeton.edu/algs4/assignments/baseball/specification.php)
 
 Score: 100/100
+
+## Week 4 - Boggle
+
+Topics covered:
+- R-way Tries
+- Ternary Search Tries
+
+[Boggle specification](https://coursera.cs.princeton.edu/algs4/assignments/boggle/specification.php)
+
+Score: 100/100
