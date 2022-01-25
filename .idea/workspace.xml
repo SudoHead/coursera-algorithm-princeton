@@ -44,7 +44,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
-  <component name="RunManager" selected="Application.BaseballGraphVisualizer">
+  <component name="RunManager" selected="Application.BoggleSolver">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -60,7 +60,24 @@
     <configuration name="BaseballGraphVisualizer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="part_II.week3.BaseballGraphVisualizer" />
       <module name="coursera-algorithm-princeton" />
-      <option name="PROGRAM_PARAMETERS" value="part_II/week3/files/teams24.txt" />
+      <option name="PROGRAM_PARAMETERS" value="part_II/week3/files/teams12.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoggleGame" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="part_II.week4.BoggleGame" />
+      <module name="coursera-algorithm-princeton" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/part_II/week4/boggle/" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoggleSolver" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="part_II.week4.BoggleSolver" />
+      <module name="coursera-algorithm-princeton" />
+      <option name="PROGRAM_PARAMETERS" value="boggle/dictionary-yawl.txt boggle/board-pneumonoultramicroscopicsilicovolcanoconiosis.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/part_II/week4/" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -72,10 +89,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KdTreeVisualizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="KdTreeVisualizer" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="week5.KdTreeVisualizer" />
       <module name="coursera-algorithm-princeton" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeyIndexedCounting" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="part_II.week3.strings.KeyIndexedCounting" />
+      <module name="coursera-algorithm-princeton" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,11 +166,14 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SAP" />
-      <item itemvalue="Application.SeamCarver" />
       <item itemvalue="Application.BaseballElimination" />
       <item itemvalue="Application.BaseballGraphVisualizer" />
+      <item itemvalue="Application.KeyIndexedCounting" />
+      <item itemvalue="Application.BoggleSolver" />
+      <item itemvalue="Application.BoggleGame" />
       <item itemvalue="Application.Outcast" />
+      <item itemvalue="Application.SAP" />
+      <item itemvalue="Application.SeamCarver" />
       <item itemvalue="Application.KdTreeVisualizer" />
       <item itemvalue="Application.KdTree" />
       <item itemvalue="Application.NearestNeighborVisualizer" />
@@ -158,7 +185,6 @@
         <item itemvalue="Application.KdTree" />
         <item itemvalue="Application.WordNet" />
         <item itemvalue="Application.RangeSearchVisualizer" />
-        <item itemvalue="Application.KdTreeVisualizer" />
         <item itemvalue="Application.NearestNeighborVisualizer" />
       </list>
     </recent_temporary>
@@ -171,7 +197,18 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/part_II/week3/strings/KeyIndexedCounting.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((BoggleSingleCellSolver)this).validWords" custom="part_II.week4.BoggleSolver.BoggleSingleCellSolver" />
+        <watch expression="((BoggleTrie)this).root" custom="part_II.week4.BoggleTrie" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

@@ -173,7 +173,7 @@ public class BaseballGraphVisualizer {
         }
 
         double origin_x = 0.05, origin_y = 0.5;
-        double level_offset_x = 0.28, level_offset_y = 0.03;
+        double level_offset_x = 0.28;
         double node_size = 0.02;
 
         // column 2 -- numT x numT nodes of remeaning matches
@@ -234,6 +234,7 @@ public class BaseballGraphVisualizer {
                 double x = _x[v];
                 double y = _y[v];
                 StdDraw.setPenColor(StdDraw.GRAY);
+                if (ff.inCut(v)) StdDraw.setPenColor(StdDraw.BOOK_RED);
                 StdDraw.filledCircle(x, y, node_size);
                 StdDraw.setPenColor(StdDraw.BLACK);
                 StdDraw.text(x, y, i + "-" + j);
@@ -246,6 +247,7 @@ public class BaseballGraphVisualizer {
             double x = _x[i];
             double y = _y[i];
             StdDraw.setPenColor(StdDraw.GRAY);
+            if (ff.inCut(i)) StdDraw.setPenColor(StdDraw.BOOK_RED);
             StdDraw.filledCircle(x, y, node_size);
             StdDraw.setPenColor(StdDraw.BLACK);
             StdDraw.text(x, y, "" + i);
@@ -255,12 +257,14 @@ public class BaseballGraphVisualizer {
 
         // column 1 -- only s
         StdDraw.setPenColor(StdDraw.GRAY);
+        if (ff.inCut(fn.V() - 2)) StdDraw.setPenColor(StdDraw.BOOK_RED);
         StdDraw.filledCircle(origin_x, origin_y, node_size);
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.text(origin_x, origin_y, "s");
 
         // column 4 -- t
         StdDraw.setPenColor(StdDraw.GRAY);
+        if (ff.inCut(fn.V() - 1)) StdDraw.setPenColor(StdDraw.BOOK_RED);
         StdDraw.filledCircle(origin_x + level_offset_x * 3, origin_y, node_size);
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.text(origin_x + level_offset_x * 3, origin_y, "t");
