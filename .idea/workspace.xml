@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6102fa40-eabb-48e7-92cb-a813542f393c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +42,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
-  <component name="RunManager" selected="Application.BoggleSolver">
+  <component name="RunManager" selected="Application.BurrowsWheeler decoding">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -82,6 +85,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BurrowsWheeler decoding" type="Application" factoryName="Application">
+      <output_file path="abra_bw_decoded.txt" is_save="true" />
+      <option name="MAIN_CLASS_NAME" value="part_II.week5.BurrowsWheeler" />
+      <module name="coursera-algorithm-princeton" />
+      <option name="PROGRAM_PARAMETERS" value="+" />
+      <option name="REDIRECT_INPUT" value="true" />
+      <option name="INPUT_FILE" value="abra.bw" />
+      <selectedOptions>
+        <option name="environmentVariables" visible="false" />
+      </selectedOptions>
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/part_II/week5/" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BurrowsWheeler encoding" type="Application" factoryName="Application">
+      <output_file path="abra.bw" is_save="true" />
+      <option name="MAIN_CLASS_NAME" value="part_II.week5.BurrowsWheeler" />
+      <module name="coursera-algorithm-princeton" />
+      <option name="PROGRAM_PARAMETERS" value="-" />
+      <option name="REDIRECT_INPUT" value="true" />
+      <option name="INPUT_FILE" value="abra.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/part_II/week5/" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CircularSuffixArray" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="part_II.week5.CircularSuffixArray" />
+      <module name="coursera-algorithm-princeton" />
+      <option name="PROGRAM_PARAMETERS" value="ABRACADABRA!" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KdTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="part_I.week5.KdTree" />
       <module name="coursera-algorithm-princeton" />
@@ -100,6 +138,30 @@
     <configuration name="KeyIndexedCounting" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="part_II.week3.strings.KeyIndexedCounting" />
       <module name="coursera-algorithm-princeton" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoveToFront decoding" type="Application" factoryName="Application">
+      <output_file path="abra_mtf_decoded.txt" is_save="true" />
+      <option name="MAIN_CLASS_NAME" value="part_II.week5.MoveToFront" />
+      <module name="coursera-algorithm-princeton" />
+      <option name="PROGRAM_PARAMETERS" value="+" />
+      <option name="REDIRECT_INPUT" value="true" />
+      <option name="INPUT_FILE" value="abra.mtf" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/part_II/week5/" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoveToFront encoding" type="Application" factoryName="Application">
+      <output_file path="abra.mtf" is_save="true" />
+      <option name="MAIN_CLASS_NAME" value="part_II.week5.MoveToFront" />
+      <module name="coursera-algorithm-princeton" />
+      <option name="PROGRAM_PARAMETERS" value="-" />
+      <option name="REDIRECT_INPUT" value="true" />
+      <option name="INPUT_FILE" value="abra.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/part_II/week5/" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,6 +231,11 @@
       <item itemvalue="Application.BaseballElimination" />
       <item itemvalue="Application.BaseballGraphVisualizer" />
       <item itemvalue="Application.KeyIndexedCounting" />
+      <item itemvalue="Application.CircularSuffixArray" />
+      <item itemvalue="Application.BurrowsWheeler encoding" />
+      <item itemvalue="Application.BurrowsWheeler decoding" />
+      <item itemvalue="Application.MoveToFront encoding" />
+      <item itemvalue="Application.MoveToFront decoding" />
       <item itemvalue="Application.BoggleSolver" />
       <item itemvalue="Application.BoggleGame" />
       <item itemvalue="Application.Outcast" />
