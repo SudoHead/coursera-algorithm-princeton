@@ -1,17 +1,17 @@
-package week3;
+package part_I.week3;
 
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
-import week2.ElementarySort;
+import part_I.week2.ElementarySort;
 
 import java.util.Arrays;
 
-public class MergeSort <Item>{
+public class MergeSort<Item> {
     private static boolean isSorted(Comparable[] a, int lo, int hi) {
         if (hi - lo == 1)
             return true;
         for (int i = lo + 1; i < hi; i++) {
-            if (a[i-1].compareTo(a[i]) > 0)
+            if (a[i - 1].compareTo(a[i]) > 0)
                 return false;
         }
         return true;
@@ -63,15 +63,15 @@ public class MergeSort <Item>{
     }
 
     public static void sortExample() {
-        Character[] a = "MERGESORTEXAMPLE".chars().mapToObj(c -> (char)c).toArray(Character[]::new);
+        Character[] a = "MERGESORTEXAMPLE".chars().mapToObj(c -> (char) c).toArray(Character[]::new);
 
-        for (char c:a)
+        for (char c : a)
             System.out.print(c);
         System.out.println();
 
         MergeSort.sortBottomUp(a, new Comparable[a.length]);
 
-        for (char c:a)
+        for (char c : a)
             System.out.print(c);
         System.out.println();
 

@@ -1,6 +1,9 @@
+package part_I.week2;
+
+import edu.princeton.cs.algs4.StdRandom;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import edu.princeton.cs.algs4.StdRandom;
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
@@ -57,7 +60,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     private void resizeGrow() {
         Item[] biggerArr = (Item[]) new Object[arr.length * 2];
         int index = 0;
-        for (Item e: arr) {
+        for (Item e : arr) {
             if (e != null) {
                 biggerArr[index++] = e;
             }
@@ -125,27 +128,48 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         System.out.println("Sample: " + rq.sample());
         System.out.println("Sample: " + rq.sample());
         System.out.println("Sample: " + rq.sample());
-        for (Integer i : rq) { System.out.print(" " + i + ","); } System.out.println();
+        for (Integer i : rq) {
+            System.out.print(" " + i + ",");
+        }
+        System.out.println();
 
         System.out.println("Dequeuing: " + rq.dequeue());
-        for (Integer i : rq) { System.out.print(" " + i + ","); } System.out.println();
+        for (Integer i : rq) {
+            System.out.print(" " + i + ",");
+        }
+        System.out.println();
 
         System.out.println("Dequeuing: " + rq.dequeue());
-        for (Integer i : rq) { System.out.print(" " + i + ","); } System.out.println();
+        for (Integer i : rq) {
+            System.out.print(" " + i + ",");
+        }
+        System.out.println();
 
         System.out.println("Dequeuing: " + rq.dequeue());
-        for (Integer i : rq) { System.out.print(" " + i + ","); } System.out.println();
+        for (Integer i : rq) {
+            System.out.print(" " + i + ",");
+        }
+        System.out.println();
 
         System.out.println("Dequeuing: " + rq.dequeue());
-        for (Integer i : rq) { System.out.print(" " + i + ","); } System.out.println();
+        for (Integer i : rq) {
+            System.out.print(" " + i + ",");
+        }
+        System.out.println();
 
         System.out.println("Dequeuing: " + rq.dequeue());
-        for (Integer i : rq) { System.out.print(" " + i + ","); } System.out.println();
+        for (Integer i : rq) {
+            System.out.print(" " + i + ",");
+        }
+        System.out.println();
 
         System.out.println("Dequeuing: " + rq.dequeue());
-        for (Integer i : rq) { System.out.print(" " + i + ","); } System.out.println();
+        for (Integer i : rq) {
+            System.out.print(" " + i + ",");
+        }
+        System.out.println();
 
-        System.out.println("Queue is " + (rq.isEmpty() ? "": "NOT ") + "empty");
+        System.out.println("Queue is " + (rq.isEmpty() ? "" : "NOT ") + "empty");
 
         System.out.println("End");
     }

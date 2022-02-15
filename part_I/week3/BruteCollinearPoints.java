@@ -1,3 +1,5 @@
+package part_I.week3;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +11,7 @@ public class BruteCollinearPoints {
             throw new IllegalArgumentException("Points array cannot be null");
         lineSegments = new ArrayList<LineSegment>();
         for (int i = 0; i < points.length - 1; i++) {
-            if (points[i] == null || points[i+1] == null) {
+            if (points[i] == null || points[i + 1] == null) {
                 throw new IllegalArgumentException("No point can be null");
             }
             int rightSize = points.length - i - 1;

@@ -1,4 +1,4 @@
-package week5;
+package part_I.week5;
 
 /******************************************************************************
  *  Compilation:  javac NearestNeighborVisualizer.java

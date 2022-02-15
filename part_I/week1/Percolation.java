@@ -1,5 +1,7 @@
-import edu.princeton.cs.algs4.WeightedQuickUnionUF;
+package part_I.week1;
+
 import edu.princeton.cs.algs4.StdRandom;
+import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
     private final int size;
@@ -18,7 +20,7 @@ public class Percolation {
 
     private int convertZeroBased(int index) {
         if (index <= 0 || index > size) {
-            throw new IllegalArgumentException("Illegal index "+ index + ", n = " + size);
+            throw new IllegalArgumentException("Illegal index " + index + ", n = " + size);
         }
         return index - 1;
     }

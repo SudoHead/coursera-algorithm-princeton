@@ -1,4 +1,5 @@
-package week3;
+package part_I.week3;
+
 import edu.princeton.cs.algs4.StdRandom;
 
 public class QuickSort {
@@ -6,7 +7,7 @@ public class QuickSort {
         if (hi - lo == 1)
             return true;
         for (int i = lo + 1; i < hi; i++) {
-            if (a[i-1].compareTo(a[i]) > 0)
+            if (a[i - 1].compareTo(a[i]) > 0)
                 return false;
         }
         return true;

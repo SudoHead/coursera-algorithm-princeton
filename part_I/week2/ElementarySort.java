@@ -1,15 +1,14 @@
-package week2;
+package part_I.week2;
 
 import edu.princeton.cs.algs4.StdRandom;
-import edu.princeton.cs.algs4.StdStats;
 import edu.princeton.cs.algs4.Stopwatch;
 
-import java.time.OffsetDateTime;
 import java.util.Arrays;
 
-public class ElementarySort <Item extends Comparable<Item>> {
+public class ElementarySort<Item extends Comparable<Item>> {
 
-    public ElementarySort() {}
+    public ElementarySort() {
+    }
 
     private void exchange(Item[] a, int x, int y) {
         // exchange a[x] with a[y]
@@ -33,10 +32,9 @@ public class ElementarySort <Item extends Comparable<Item>> {
     public void insertionSort(Item[] a) {
         for (int i = 0; i < a.length; i++) {
             for (int j = i; j > 0; j--) {
-                if (a[j].compareTo(a[j-1]) < 0) {
-                    exchange(a, j, j-1);
-                }
-                else {
+                if (a[j].compareTo(a[j - 1]) < 0) {
+                    exchange(a, j, j - 1);
+                } else {
                     break;
                 }
             }
@@ -47,14 +45,14 @@ public class ElementarySort <Item extends Comparable<Item>> {
         int N = a.length;
         int h = 1;
         // 3x + 1 sequence
-        while (h < N/3) {
+        while (h < N / 3) {
             h = 3 * h + 1;
         }
 
         while (h >= 1) {
             for (int i = h; i < N; i++) {
                 for (int j = i; j >= h && a[j].compareTo(a[j - h]) < 0; j -= h) {
-                    exchange(a, j, j-h);
+                    exchange(a, j, j - h);
                 }
             }
             h = h / 3;

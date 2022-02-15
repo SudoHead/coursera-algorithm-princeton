@@ -1,6 +1,6 @@
-package week2;
+package part_I.week2;
 
-import java.util.*;
+import java.util.Stack;
 
 class StackMax<item extends Comparable<item>> {
     private final Stack<item> stack;

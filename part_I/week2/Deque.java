@@ -1,3 +1,5 @@
+package part_I.week2;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -153,19 +155,25 @@ public class Deque<Item> implements Iterable<Item> {
         deq.addLast(1);
         System.out.println("Empty(): " + deq.isEmpty());
         System.out.println("iterator(): " + deq.iterator());
-        System.out.println("RemoveFirst(): " +  deq.removeFirst());
+        System.out.println("RemoveFirst(): " + deq.removeFirst());
 
-        System.out.println("Size(): " +  deq.size());
+        System.out.println("Size(): " + deq.size());
 
         for (int i = 0; i < 10; i++) {
             deq.addFirst(i);
         }
-        for (Integer i : deq) { System.out.print(" " + i + ","); } System.out.println();
+        for (Integer i : deq) {
+            System.out.print(" " + i + ",");
+        }
+        System.out.println();
 
         for (int i = 0; i < 10; i++) {
-            deq.addLast(100-i);
+            deq.addLast(100 - i);
         }
-        for (Integer i : deq) { System.out.print(" " + i + ","); } System.out.println();
+        for (Integer i : deq) {
+            System.out.print(" " + i + ",");
+        }
+        System.out.println();
 
         System.out.println("Size: " + deq.size());
         System.out.println("RemoveFirst(): " + deq.removeFirst());
